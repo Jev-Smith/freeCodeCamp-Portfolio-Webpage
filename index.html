@@ -8,32 +8,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
     <header>
         <nav id="navbar">
             <a href="#" id="name">Jevaughn Smith</a>
+
+            <button type="button" aria-label="toggle menu" class="menu-button">
+                <span class="material-symbols-outlined menu-icon">menu</span>
+            </button>
     
             <ul>
-                <li>
+                <li class="hidden nav-items">
                     <span class="left-parenthesis">(</span>
                         <a href="#" class="nav-link">About</a>
                     <span class="right-parenthesis">)</span>
                 </li>
 
-                <li>
+                <li class="hidden nav-items">
                     <span class="left-parenthesis">(</span>
                     <a href="#" class="nav-link">Experience</a>
                     <span class="right-parenthesis">)</span>
                 </li>
 
-                <li>
+                <li class="hidden nav-items">
                     <span class="left-parenthesis">(</span>
                     <a href="#" class="nav-link">Projects</a>
                     <span class="right-parenthesis">)</span>
                 </li>
 
-                <li>
+                <li class="hidden nav-items">
                     <span class="left-parenthesis">(</span>
                     <a href="#" class="nav-link">Contact</a>
                     <span class="right-parenthesis">)</span>
@@ -63,20 +69,68 @@
 
         <!-- Move later -->
         <a href="#">Github</a> 
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
     </main>
 
     <script>
         const aTags = document.querySelectorAll('.nav-link');
+        const menuButton = document.querySelector('.menu-button');
+        const navItems = document.querySelectorAll('.nav-items');
+        const icon = document.querySelector('.menu-icon');
         
         aTags.forEach((aTag) => {
             aTag.addEventListener('mouseover', (e) => {
-                e.target.parentElement.firstElementChild.classList.add('show')
-                e.target.parentElement.lastElementChild.classList.add('show')
+                e.target.parentElement.firstElementChild.classList.add('show-parenthesis')
+                e.target.parentElement.lastElementChild.classList.add('show-parenthesis')
             })
 
             aTag.addEventListener('mouseout', (e) => {
-                e.target.parentElement.firstElementChild.classList.remove('show')
-                e.target.parentElement.lastElementChild.classList.remove('show')
+                e.target.parentElement.firstElementChild.classList.remove('show-parenthesis')
+                e.target.parentElement.lastElementChild.classList.remove('show-parenthesis')
+            })
+        })
+
+        menuButton.addEventListener('click', () => {
+            navItems.forEach((navItem) => {
+                if(navItem.classList.contains('show')){
+                    icon.innerText = 'menu';
+                    navItem.classList.remove('show')
+                }
+                else{
+                    icon.innerText = 'close';
+                    navItem.classList.add('show')
+                }
             })
         })
     </script>

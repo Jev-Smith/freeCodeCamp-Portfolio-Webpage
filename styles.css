@@ -35,16 +35,43 @@ a{
 }
 
 #navbar ul a,
-#name{
+#name,
+.material-symbols-outlined{
     color: var(--black);
+}
+
+#navbar ul,
+header{
+    background-color: var(--white);
 }
 
 /* Nav */
 
 header{
-    background-color: var(--white);
     position: sticky;
     top: 0;
+}
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+.menu-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 #navbar{
@@ -53,14 +80,27 @@ header{
 }
 
 #navbar ul{
-    width: 40%;
     justify-content: space-between;
-    position: relative;
-    top: 2px;
+    position: absolute;
+    top: 59.5px;
+    right: 0;
+    flex-direction: column;
 }
 
 #navbar ul li{
-    max-width: 100px;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+#navbar ul,
+#navbar ul li{
+    width: 100%;
+}
+
+.show-parenthesis {
+    transition: all 1s;
+    color: var(--blue);
+    font-weight: 700;
 }
 
 #name{
@@ -71,17 +111,6 @@ header{
 #name:hover{
     transition: all 0.5s;
     color: var(--blue)
-}
-
-.left-parenthesis,
-.right-parenthesis{
-    color: white;
-}
-
-.show{
-    transition: all 1s;
-    color: blue;
-    font-weight: 700;
 }
 
 /* Welcome Section */
@@ -101,4 +130,20 @@ header{
     width: 50%;
     height: 50%;
     background-color: green;
+}
+
+/* Update later */
+@media screen and (min-width: 900px){
+    #navbar ul {
+        width: 40%;
+    }
+
+    .left-parenthesis,
+    .right-parenthesis {
+        color: white;
+    }
+
+    #navbar ul li {
+        max-width: 100px;
+    }
 }

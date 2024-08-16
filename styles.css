@@ -52,20 +52,12 @@ header{
 }
 
 #navbar ul{
-    width: 25%;
+    width: 28%;
     justify-content: space-between;
 }
 
 #navbar ul li{
     padding: 5px;
-    border-width: 1.5px;
-    border-style: solid;
-    border-color: var(--white) var(--white) var(--white) var(--blue);
-}
-
-#navbar ul li:hover {
-    transition: all 0.3s;
-    border-color: var(--white) var(--white) var(--blue) var(--white);
 }
 
 #name{
@@ -79,3 +71,16 @@ header{
     transition: all 0.5s;
     color: var(--blue)
 }
+
+.left-parenthesis,
+.right-parenthesis{
+    color: white;
+}
+
+.show{
+    transition: all 1s;
+    color: blue;
+    font-weight: 700;
+}
+
+/* Welcome Section */

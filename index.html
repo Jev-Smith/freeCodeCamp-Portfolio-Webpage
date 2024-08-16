@@ -15,16 +15,36 @@
             <a href="#" id="name">Jevaughn Smith</a>
     
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Experience</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
+                <li>
+                    <span class="left-parenthesis">(</span>
+                        <a href="#" class="nav-link">About</a>
+                    <span class="right-parenthesis">)</span>
+                </li>
+
+                <li>
+                    <span class="left-parenthesis">(</span>
+                    <a href="#" class="nav-link">Experience</a>
+                    <span class="right-parenthesis">)</span>
+                </li>
+
+                <li>
+                    <span class="left-parenthesis">(</span>
+                    <a href="#" class="nav-link">Projects</a>
+                    <span class="right-parenthesis">)</span>
+                </li>
+
+                <li>
+                    <span class="left-parenthesis">(</span>
+                    <a href="#" class="nav-link">Contact</a>
+                    <span class="right-parenthesis">)</span>
+                </li>
             </ul>
         </nav>
     </header>
     
     <main>
         <section id="welcome-section">
+            <img src="https://img.freepik.com/premium-photo/memoji-african-american-man-white-background-emoji_826801-6856.jpg" alt="Jevaughn Smith">
             <h1>Welcome</h1>
         </section>
     
@@ -38,5 +58,21 @@
     
         <a href="#">Github</a> <!-- Move later -->
     </main>
+
+    <script>
+        const aTags = document.querySelectorAll('.nav-link');
+        
+        aTags.forEach((aTag) => {
+            aTag.addEventListener('mouseover', (e) => {
+                e.target.parentElement.firstElementChild.classList.add('show')
+                e.target.parentElement.lastElementChild.classList.add('show')
+            })
+
+            aTag.addEventListener('mouseout', (e) => {
+                e.target.parentElement.firstElementChild.classList.remove('show')
+                e.target.parentElement.lastElementChild.classList.remove('show')
+            })
+        })
+    </script>
 </body>
 </html>

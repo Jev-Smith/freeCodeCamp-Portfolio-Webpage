@@ -29,7 +29,8 @@ a{
 
 /* Shared Styles */
 #navbar,
-#navbar ul{
+#navbar ul,
+#welcome-section{
     display: flex;
 }
 
@@ -52,19 +53,19 @@ header{
 }
 
 #navbar ul{
-    width: 28%;
+    width: 40%;
     justify-content: space-between;
+    position: relative;
+    top: 2px;
 }
 
 #navbar ul li{
-    padding: 5px;
+    max-width: 100px;
 }
 
 #name{
     font-weight: 700;
     font-size: 1.3rem;
-    position: relative;
-    top: 2px;
 }
 
 #name:hover{
@@ -84,3 +85,20 @@ header{
 }
 
 /* Welcome Section */
+#welcome-section{
+    background-color: grey;
+    height: 100dvh;
+    justify-content: center;
+    align-items: center;
+}
+
+#avatar{
+    width: 50%;
+    border-radius: 50%;
+}
+
+.center{
+    width: 50%;
+    height: 50%;
+    background-color: green;
+}

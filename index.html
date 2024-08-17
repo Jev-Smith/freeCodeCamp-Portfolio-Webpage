@@ -53,7 +53,18 @@
             <div class="center">
                 <img id="avatar" src="https://img.freepik.com/premium-photo/memoji-african-american-man-white-background-emoji_826801-6856.jpg" alt="Jevaughn Smith">
                 <div class="welcome-text">
-                    <h1>Welcome</h1>
+                    <p>Hello, I'm</p>
+                    <h1>Jevaughn Smith</h1>
+                    <p class="profession">Full Stack Developer</p>
+
+                    <div class="welcome-buttons">
+                        <div>
+                            <a href="#">Github</a>
+                        </div> 
+                        <div>
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>
                 </div>
                 
             </div>
@@ -118,6 +129,15 @@
             aTag.addEventListener('mouseout', (e) => {
                 e.target.parentElement.firstElementChild.classList.remove('show-parenthesis')
                 e.target.parentElement.lastElementChild.classList.remove('show-parenthesis')
+            })
+
+            aTag.addEventListener('click', () => {
+                navItems.forEach((navItem) => {
+                    if (navItem.classList.contains('show')) {
+                        navItem.classList.remove('show');
+                        icon.innerText = 'menu';
+                    }
+                })
             })
         })
 

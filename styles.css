@@ -7,7 +7,8 @@
 :root{
     --white: #fff;
     --black: #000;
-    --blue: blue;
+    --theme: magenta;
+    --double-rem: 2rem;
 }
 
 body{
@@ -30,7 +31,9 @@ a{
 /* Shared Styles */
 #navbar,
 #navbar ul,
-#welcome-section{
+#welcome-section,
+.center,
+.welcome-buttons{
     display: flex;
 }
 
@@ -43,6 +46,11 @@ a{
 #navbar ul,
 header{
     background-color: var(--white);
+}
+
+.center,
+#navbar ul{
+    flex-direction: column;
 }
 
 /* Nav */
@@ -74,6 +82,10 @@ header{
     cursor: pointer;
 }
 
+.menu-icon:hover {
+    color: var(--theme);
+}
+
 #navbar{
     padding: 1rem;
     justify-content: space-between;
@@ -84,7 +96,6 @@ header{
     position: absolute;
     top: 59.5px;
     right: 0;
-    flex-direction: column;
 }
 
 #navbar ul li{
@@ -99,37 +110,74 @@ header{
 
 .show-parenthesis {
     transition: all 1s;
-    color: var(--blue);
+    color: var(--theme);
     font-weight: 700;
 }
 
 #name{
     font-weight: 700;
-    font-size: 1.3rem;
-}
-
-#name:hover{
-    transition: all 0.5s;
-    color: var(--blue)
+    font-size: 1.125rem;
+    background: linear-gradient(to right, var(--black), var(--theme) 80%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Welcome Section */
+h1{
+    color: rgb(255, 98, 255);
+}
+
 #welcome-section{
-    background-color: grey;
+    /* background-color: grey; */
     height: 100dvh;
     justify-content: center;
     align-items: center;
 }
 
 #avatar{
-    width: 50%;
+    width: 100%;
     border-radius: 50%;
+    margin-bottom: var(--double-rem);
 }
 
 .center{
     width: 50%;
     height: 50%;
-    background-color: green;
+    /* background-color: green; */
+}
+
+.welcome-text{
+    text-align: center;
+}
+
+.profession{
+    letter-spacing: 1.7px;
+}
+
+.welcome-buttons{
+    justify-content: space-between;
+    margin-top: var(--double-rem);
+}
+
+.welcome-buttons div{
+    border-radius: 40px;
+}
+
+.welcome-buttons div a{
+    display: inline-block;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 40px;
+    color: var(--white);
+    background: linear-gradient(to right, rgb(171, 168, 168), var(--theme));
+}
+
+.welcome-buttons div:hover {
+    border: 2px solid var(--white);
+}
+
+.welcome-buttons div a:hover {
+    transform: scale(0.9);
 }
 
 /* Update later */

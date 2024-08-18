@@ -34,7 +34,8 @@ a{
 #navbar ul,
 #welcome-section,
 .center,
-.welcome-buttons{
+.welcome-buttons,
+.about-info{
     display: flex;
 }
 
@@ -204,9 +205,8 @@ h1{
 }
 
 /* About Section */
-#about{
+.about-intro{
     position: relative;
-    overflow-x: hidden;
 }
 
 #about-me-image{
@@ -219,7 +219,7 @@ h1{
     color: var(--theme);
     font-size: 3.8rem;
     position: absolute;
-    top: 96px;
+    top: 35%;
 }
 
 .slide-in-el{
@@ -228,9 +228,53 @@ h1{
 }
 
 .slide-in{
-    transition: all 1s;
+    transition: all 1.5s;
     opacity: 1;
     transform: translateX(70%);
+}
+
+.about-info{
+    height: 500px;
+    background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(255, 0, 255, 0.3));
+    margin-top: var(--double-rem);
+    padding: var(--one-rem);
+}
+
+.about-info-2 {
+    margin-top: 0;
+    height: 500px;
+    background: linear-gradient(rgb(255, 0, 255, 0.3), rgb(0, 0, 0, 0.3));
+}
+
+.about-info .para{
+    font-size: 1.9rem;
+    text-transform: uppercase;
+    writing-mode:vertical-lr;
+    transform: rotateZ(180deg);
+    text-align: center;
+    border-left: 5px solid var(--theme);
+    width: 10%;
+    letter-spacing: 15px;
+    color: var(--theme);
+}
+
+.about-info-2 .para{
+    transform: rotateZ(0deg);
+}
+
+.about-info div{
+    width: 90%;
+    /* background-color: grey; */
+    height: 50%;
+    align-self: center;
+    text-align: center;
+}
+
+.about-icons{
+    padding: var(--one-rem);
+    color: var(--white);
+    transform: scale(2);
+    color: var(--theme);
 }
 
 /* Update later */
@@ -246,5 +290,11 @@ h1{
 
     #navbar ul li {
         max-width: 100px;
+    }
+}
+
+@media(prefers-reduced-motion) {
+    .slide-in {
+        transition: none;
     }
 }

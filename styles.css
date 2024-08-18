@@ -203,6 +203,36 @@ h1{
     }
 }
 
+/* About Section */
+#about{
+    position: relative;
+    overflow-x: hidden;
+}
+
+#about-me-image{
+    width: 50%;
+    padding: var(--one-rem);
+    border-radius: 30px;
+}
+
+#about h2{
+    color: var(--theme);
+    font-size: 3.8rem;
+    position: absolute;
+    top: 96px;
+}
+
+.slide-in-el{
+    opacity: 0;
+    transform: translateX(60%);
+}
+
+.slide-in{
+    transition: all 1s;
+    opacity: 1;
+    transform: translateX(70%);
+}
+
 /* Update later */
 @media screen and (min-width: 900px){
     #navbar ul {

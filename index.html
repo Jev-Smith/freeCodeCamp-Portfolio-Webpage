@@ -72,6 +72,11 @@
                 
             </div>
         </section>
+
+        <section id="about">
+            <img id="about-me-image" src="https://img.freepik.com/premium-photo/memoji-african-american-man-white-background-emoji_826801-6856.jpg" alt="Jevaughn Smith">
+            <h2 class="slide-in-el">About Me</h2>
+        </section>
     
         <section id="projects">
             <ul>
@@ -122,6 +127,7 @@
         const menuButton = document.querySelector('.menu-button');
         const navItems = document.querySelectorAll('.nav-items');
         const icon = document.querySelector('.menu-icon');
+        slideInElements = document.querySelectorAll('.slide-in-el')
         
         aTags.forEach((aTag) => {
             aTag.addEventListener('mouseover', (e) => {
@@ -156,6 +162,19 @@
                 }
             })
         })
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-in')
+                }
+                else {
+                    entry.target.classList.remove('slide-in')
+                }
+            })
+        })
+
+        slideInElements.forEach(el => observer.observe(el));
     </script>
 </body>
 </html>

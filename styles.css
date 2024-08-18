@@ -8,6 +8,7 @@
     --white: #fff;
     --black: #000;
     --theme: magenta;
+    --one-rem: 1rem;
     --double-rem: 2rem;
 }
 
@@ -58,6 +59,7 @@ header{
 header{
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 .hidden{
@@ -87,7 +89,7 @@ header{
 }
 
 #navbar{
-    padding: 1rem;
+    padding: var(--one-rem);
     justify-content: space-between;
 }
 
@@ -165,7 +167,7 @@ h1{
 
 .welcome-buttons div a{
     display: inline-block;
-    padding: 1rem;
+    padding: var(--one-rem);
     background: var(--white);
     border-radius: 40px;
     color: var(--white);
@@ -178,6 +180,27 @@ h1{
 
 .welcome-buttons div a:hover {
     transform: scale(0.9);
+}
+
+.drop-arrow{
+    color: var(--theme);
+    margin-top: var(--one-rem);
+    animation-name: point-down;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    position: relative;
+    transform: scale(2);
+}
+
+@keyframes point-down {
+    from{
+        top: 0px;
+    }
+
+    to{
+        top: 10px;
+    }
 }
 
 /* Update later */

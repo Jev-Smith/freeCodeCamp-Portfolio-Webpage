@@ -63,6 +63,33 @@ header{
     padding: var(--one-rem);
 }
 
+h2{
+    font-size: 3.8rem;
+}
+
+section,
+#avatar{
+    margin-bottom: var(--double-rem);
+}
+
+#navbar ul li,
+.welcome-text,
+.about-info h3,
+.about-info div,
+#experience h2{
+    text-align: center;
+}
+
+.menu-icon:hover,
+.show-parenthesis,
+.drop-arrow,
+#about h2,
+.about-info h3,
+.about-icons,
+#experience h2 {
+    color: var(--theme);
+}
+
 /* Nav */
 
 header{
@@ -93,10 +120,6 @@ header{
     cursor: pointer;
 }
 
-.menu-icon:hover {
-    color: var(--theme);
-}
-
 #navbar{
     justify-content: space-between;
 }
@@ -109,7 +132,6 @@ header{
 }
 
 #navbar ul li{
-    text-align: center;
     padding: 0.5rem;
 }
 
@@ -120,7 +142,6 @@ header{
 
 .show-parenthesis {
     transition: all 1s;
-    color: var(--theme);
     font-weight: 700;
 }
 
@@ -146,16 +167,11 @@ h1{
 #avatar{
     width: 100%;
     border-radius: 50%;
-    margin-bottom: var(--double-rem);
 }
 
 .center{
     width: 50%;
     height: 50%;
-}
-
-.welcome-text{
-    text-align: center;
 }
 
 .profession{
@@ -188,7 +204,6 @@ h1{
 }
 
 .drop-arrow{
-    color: var(--theme);
     margin-top: var(--one-rem);
     animation-name: point-down;
     animation-iteration-count: infinite;
@@ -219,8 +234,6 @@ h1{
 }
 
 #about h2{
-    color: var(--theme);
-    font-size: 3.8rem;
     position: absolute;
     top: 35%;
 }
@@ -251,11 +264,9 @@ h1{
     text-transform: uppercase;
     writing-mode:vertical-lr;
     transform: rotateZ(180deg);
-    text-align: center;
     border-left: 5px solid var(--theme);
     width: 10%;
     letter-spacing: 12px;
-    color: var(--theme);
 }
 
 .about-info-2 h3{
@@ -266,7 +277,6 @@ h1{
     width: 90%;
     height: 50%;
     align-self: center;
-    text-align: center;
     font-size: 1.125rem;
 }
 
@@ -277,7 +287,6 @@ h1{
 .about-icons{
     color: var(--white);
     transform: scale(2);
-    color: var(--theme);
 }
 
 .hide-li{
@@ -287,6 +296,11 @@ h1{
 .show-li{
     transition: all 1.3s;
     opacity: 1;
+}
+
+/* Experience Section */
+#experience h2{
+    font-size: 3.8rem;
 }
 
 /* Update later */

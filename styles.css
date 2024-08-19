@@ -55,6 +55,14 @@ header{
     flex-direction: column;
 }
 
+#navbar,
+.welcome-buttons div a,
+#about-me-image,
+.about-info,
+.about-icons{
+    padding: var(--one-rem);
+}
+
 /* Nav */
 
 header{
@@ -90,7 +98,6 @@ header{
 }
 
 #navbar{
-    padding: var(--one-rem);
     justify-content: space-between;
 }
 
@@ -131,7 +138,6 @@ h1{
 }
 
 #welcome-section{
-    /* background-color: grey; */
     height: 100dvh;
     justify-content: center;
     align-items: center;
@@ -146,7 +152,6 @@ h1{
 .center{
     width: 50%;
     height: 50%;
-    /* background-color: green; */
 }
 
 .welcome-text{
@@ -168,7 +173,6 @@ h1{
 
 .welcome-buttons div a{
     display: inline-block;
-    padding: var(--one-rem);
     background: var(--white);
     border-radius: 40px;
     color: var(--white);
@@ -211,7 +215,6 @@ h1{
 
 #about-me-image{
     width: 50%;
-    padding: var(--one-rem);
     border-radius: 30px;
 }
 
@@ -234,47 +237,56 @@ h1{
 }
 
 .about-info{
-    height: 500px;
     background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(255, 0, 255, 0.3));
     margin-top: var(--double-rem);
-    padding: var(--one-rem);
 }
 
 .about-info-2 {
     margin-top: 0;
-    height: 500px;
     background: linear-gradient(rgb(255, 0, 255, 0.3), rgb(0, 0, 0, 0.3));
 }
 
-.about-info .para{
-    font-size: 1.9rem;
+.about-info h3{
+    font-size: 1.5rem;
     text-transform: uppercase;
     writing-mode:vertical-lr;
     transform: rotateZ(180deg);
     text-align: center;
     border-left: 5px solid var(--theme);
     width: 10%;
-    letter-spacing: 15px;
+    letter-spacing: 12px;
     color: var(--theme);
 }
 
-.about-info-2 .para{
+.about-info-2 h3{
     transform: rotateZ(0deg);
 }
 
 .about-info div{
     width: 90%;
-    /* background-color: grey; */
     height: 50%;
     align-self: center;
     text-align: center;
+    font-size: 1.125rem;
+}
+
+.about-info div ul li{
+    padding: 0.3rem;
 }
 
 .about-icons{
-    padding: var(--one-rem);
     color: var(--white);
     transform: scale(2);
     color: var(--theme);
+}
+
+.hide-li{
+    opacity: 0;
+}
+
+.show-li{
+    transition: all 1.3s;
+    opacity: 1;
 }
 
 /* Update later */

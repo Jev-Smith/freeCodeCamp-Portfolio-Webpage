@@ -78,22 +78,36 @@
         <section id="about">
             <div class="about-intro">
                 <img id="about-me-image" src="https://img.freepik.com/premium-photo/memoji-african-american-man-white-background-emoji_826801-6856.jpg" alt="Jevaughn Smith">
-                <h2 class="slide-in-el">About Me</h2>
+                <h2 class="observe slide-in-el">About Me</h2>
             </div>
 
             <div class="about-info">
-                <p class="para">Experience</p>
+                <h3>Experience</h3>
 
                 <div>
                     <span class="material-symbols-outlined about-icons">work</span>
+
+                    <ul>
+                        <li class="observe hide-li"><p>4 years</p></li>
+                        <li class="observe hide-li"><p>Self-taught</p></li>
+                        <li class="observe hide-li"><p>Full Stack Development</p></li>
+                    </ul>
                 </div>
             </div>
             <div class="about-info about-info-2">
                 <div>
                     <span class="material-symbols-outlined about-icons">computer</span>
+                    <ul>
+                        <li class="observe hide-li">
+                            <p>Back End Development and APIs</p>
+                        </li>
+                        <li class="observe hide-li">
+                            <p>JavaScript Algorithms and Data Structures</p>
+                        </li>
+                    </ul>
                 </div>
 
-                <p class="para">Education</p>
+                <h3>Certificates</h3>
             </div>
         </section>
     
@@ -107,38 +121,6 @@
 
         <!-- Move later -->
         <a href="#">Github</a> 
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
     </main>
 
     <script>
@@ -146,7 +128,7 @@
         const menuButton = document.querySelector('.menu-button');
         const navItems = document.querySelectorAll('.nav-items');
         const icon = document.querySelector('.menu-icon');
-        slideInElements = document.querySelectorAll('.slide-in-el')
+        slideInElements = document.querySelectorAll('.observe')
         
         aTags.forEach((aTag) => {
             aTag.addEventListener('mouseover', (e) => {
@@ -184,11 +166,15 @@
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('slide-in')
+                if (entry.isIntersecting && entry.target.nodeName === 'H2') {
+                    entry.target.classList.add('slide-in');
+                }
+                else if(entry.isIntersecting && entry.target.nodeName === 'LI'){
+                    entry.target.classList.add('show-li');
                 }
                 else {
                     entry.target.classList.remove('slide-in')
+                    entry.target.classList.remove('show-li')
                 }
             })
         })

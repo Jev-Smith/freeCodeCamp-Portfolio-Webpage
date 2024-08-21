@@ -78,17 +78,17 @@ section,
 .welcome-text,
 .about-info h3,
 .about-info div,
-#experience h2{
+#experience h2,
+#projects h2{
     text-align: center;
 }
 
 .menu-icon:hover,
 .show-parenthesis,
 .drop-arrow,
-#about h2,
+h2,
 .about-info h3,
 .about-icons,
-#experience h2,
 .check {
     color: var(--theme);
 }

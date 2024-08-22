@@ -37,7 +37,9 @@ a{
 .center,
 .welcome-buttons,
 .about-info,
-.list ul{
+.list ul,
+#projects div,
+.grid-container li{
     display: flex;
 }
 
@@ -53,7 +55,9 @@ header{
 }
 
 .center,
-#navbar ul{
+#navbar ul,
+.list ul,
+.grid-container li{
     flex-direction: column;
 }
 
@@ -79,7 +83,8 @@ section,
 .about-info h3,
 .about-info div,
 #experience h2,
-#projects h2{
+#projects h2,
+.grid-container li{
     text-align: center;
 }
 
@@ -102,14 +107,44 @@ h2,
 .list span,
 .drop-arrow,
 .about-intro,
-.list{
+.list,
+.grid-container li,
+.link{
     position: relative;
 }
 
 #navbar ul,
 #about h2,
-.border{
+.border,
+.grid-container li a{
     position: absolute;
+}
+
+#welcome-section,
+#projects div,
+.grid-container li{
+    justify-content: center;
+}
+
+#projects div,
+.welcome-buttons,
+.about-info{
+    margin-top: var(--double-rem);
+}
+
+.list ul,
+#welcome-section{
+    align-items: center;
+}
+
+.show, 
+.grid-container li a{
+    display: block;
+}
+
+.grid-container li,
+.grid-container li a{
+    border-radius: 10px;
 }
 
 /* Nav */
@@ -180,8 +215,6 @@ h1{
 
 #welcome-section{
     height: 100dvh;
-    justify-content: center;
-    align-items: center;
 }
 
 #avatar{
@@ -200,7 +233,6 @@ h1{
 
 .welcome-buttons{
     justify-content: space-between;
-    margin-top: var(--double-rem);
 }
 
 .welcome-buttons div{
@@ -212,7 +244,9 @@ h1{
     background: var(--white);
     border-radius: 40px;
     color: var(--white);
-    background: linear-gradient(to right, rgb(171, 168, 168), var(--theme));
+    background: linear-gradient(to right, var(--white), var(--theme));
+    font-weight: 700;
+    color: var(--black);
 }
 
 .welcome-buttons div:hover {
@@ -266,7 +300,6 @@ h1{
 
 .about-info{
     background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(255, 0, 255, 0.3));
-    margin-top: var(--double-rem);
 }
 
 .about-info-2 {
@@ -307,7 +340,7 @@ h1{
 }
 
 .show-li{
-    transition: all 1.5s;
+    transition: all 2s;
     opacity: 1;
 }
 
@@ -326,11 +359,6 @@ h1{
 .list span{
     margin-right: var(--one-rem);
     top: 5px;
-}
-
-.list ul{
-    flex-direction: column;
-    align-items: center;
 }
 
 .list li {
@@ -367,6 +395,43 @@ h1{
     transition: all 1.5s;
     transform: translateX(0px);
     opacity: 1;
+}
+
+#projects div{
+    background: linear-gradient(rgb(0, 0, 0, 0.3),rgb(255, 0, 255, 0.3), rgb(0, 0, 0, 0.3));
+}
+
+.grid-container{
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px 10px;
+}
+
+.grid-container li{
+    height: 100px;
+    background: linear-gradient(to right, var(--white), var(--theme));
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.third-grid-item{
+    grid-column: 1 /3;
+}
+
+.grid-container li a{
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+}
+
+
+.link{
+    transform: rotateZ(-45deg);
+    top: var(--five-px);
 }
 
 /* Update later */

@@ -84,7 +84,10 @@ section,
 .about-info div,
 #experience h2,
 #projects h2,
-.grid-container li{
+.grid-container li,
+#contacts h2,
+#contacts ul li,
+#contacts ul li a{
     text-align: center;
 }
 
@@ -94,13 +97,16 @@ section,
 h2,
 .about-info h3,
 .about-icons,
-.check {
+.check,
+#contacts ul li span{
     color: var(--theme);
 }
 
 #name,
 .about-info div,
-.list li{
+.list li,
+#contacts ul li,
+#contacts ul li a{
     font-size: 1.125rem;
 }
 
@@ -109,7 +115,8 @@ h2,
 .about-intro,
 .list,
 .grid-container li,
-.link{
+.link,
+.email{
     position: relative;
 }
 
@@ -145,6 +152,12 @@ h2,
 .grid-container li,
 .grid-container li a{
     border-radius: 10px;
+}
+
+.list,
+.grid-container,
+#contacts ul{
+    width: 80%;
 }
 
 /* Nav */
@@ -350,7 +363,6 @@ h1{
 }
 
 .list{
-    width: 80%;
     margin: var(--double-rem) auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -402,7 +414,6 @@ h1{
 }
 
 .grid-container{
-    width: 80%;
     display: grid;
     grid-template-columns: auto auto;
     gap: 10px 10px;
@@ -429,8 +440,37 @@ h1{
 }
 
 
+.grid-container li:hover{
+    transition-duration: 0.5s;
+    transform: scale(1.05);
+}
+
 .link{
     transform: rotateZ(-45deg);
+    top: var(--five-px);
+}
+
+/* Contacts Section */
+#contacts ul{
+    margin-top: var(--double-rem);
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#contacts ul li p{
+    display: inline-block;
+}
+
+#contacts ul li a {
+    text-decoration: underline;
+}
+
+#contacts ul li a:hover {
+    color: var(--theme);
+}
+
+.email{
     top: var(--five-px);
 }
 

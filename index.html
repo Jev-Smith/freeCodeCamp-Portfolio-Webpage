@@ -27,19 +27,19 @@
             <ul>
                 <li class="hidden nav-items">
                     <span class="left-parenthesis">(</span>
-                        <a href="#" class="nav-link">About</a>
+                        <a href="#about" class="nav-link">About</a>
                     <span class="right-parenthesis">)</span>
                 </li>
 
                 <li class="hidden nav-items">
                     <span class="left-parenthesis">(</span>
-                    <a href="#" class="nav-link">Experience</a>
+                    <a href="#experience" class="nav-link">Experience</a>
                     <span class="right-parenthesis">)</span>
                 </li>
 
                 <li class="hidden nav-items">
                     <span class="left-parenthesis">(</span>
-                    <a href="#" class="nav-link">Projects</a>
+                    <a href="#projects" class="nav-link">Projects</a>
                     <span class="right-parenthesis">)</span>
                 </li>
 
@@ -63,7 +63,7 @@
 
                     <div class="welcome-buttons">
                         <div>
-                            <a href="#">Github</a>
+                            <a id="profile-link" target="_blank" href="https://github.com/Jev-Smith">Github</a>
                         </div> 
                         <div>
                             <a href="#">Contact</a>
@@ -79,7 +79,7 @@
         <section id="about">
             <div class="about-intro">
                 <img id="about-me-image" src="https://img.freepik.com/premium-photo/memoji-african-american-man-white-background-emoji_826801-6856.jpg" alt="Jevaughn Smith">
-                <h2 class="observe slide-in-el">About Me</h2>
+                <h2 id="about-me-text" class="observe slide-in-el">About Me</h2>
             </div>
 
             <div class="about-info">
@@ -162,16 +162,18 @@
         </section>
     
         <section id="projects">
-            <h2>Projects</h2>
-            <ul>
+            <h2 class="slide-in-el-2 observe">Projects</h2>
+            <ul class="grid-container">
                 <li class="project-tile">
                     <a href="#">Click here</a>
                 </li>
             </ul>
         </section>
 
-        <!-- Move later -->
-        <a href="#">Github</a> 
+        <section id="contact">
+            <!-- Move later -->
+            <a href="#">Github</a>
+        </section>
     </main>
 
     <script>
@@ -179,7 +181,7 @@
         const menuButton = document.querySelector('.menu-button');
         const navItems = document.querySelectorAll('.nav-items');
         const icon = document.querySelector('.menu-icon');
-        slideInElements = document.querySelectorAll('.observe')
+        observedElements = document.querySelectorAll('.observe')
         
         aTags.forEach((aTag) => {
             aTag.addEventListener('mouseover', (e) => {
@@ -217,20 +219,24 @@
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting && entry.target.nodeName === 'H2') {
+                if (entry.isIntersecting && entry.target.id === "about-me-text") {
                     entry.target.classList.add('slide-in');
                 }
                 else if(entry.isIntersecting && entry.target.nodeName === 'LI'){
                     entry.target.classList.add('show-li');
                 }
+                else if(entry.isIntersecting && entry.target.classList.contains('slide-in-el-2')){
+                    entry.target.classList.add('slide-in-2');
+                }
                 else {
-                    entry.target.classList.remove('slide-in')
-                    entry.target.classList.remove('show-li')
+                    entry.target.classList.remove('slide-in');
+                    entry.target.classList.remove('show-li');
+                    entry.target.classList.remove('slide-in-2');
                 }
             })
         })
 
-        slideInElements.forEach(el => observer.observe(el));
+        observedElements.forEach(el => observer.observe(el));
     </script>
 </body>
 </html>

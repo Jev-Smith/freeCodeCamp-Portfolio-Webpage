@@ -21,7 +21,8 @@ body{
     font-style: normal;
 }
 
-main{
+main,
+#navbar{
     max-width: 900px;
 }
 
@@ -196,6 +197,7 @@ header{
 
 #navbar{
     justify-content: space-between;
+    margin: 0 auto;
 }
 
 #navbar ul{
@@ -360,7 +362,7 @@ h1{
 }
 
 .show-li{
-    transition: all 2s;
+    transition: opacity 2s;
     opacity: 1;
 }
 
@@ -444,8 +446,8 @@ h1{
 
 
 .grid-container li:hover{
-    transition-duration: 0.5s;
-    transform: scale(1.05);
+    transition: transform 0.5s;
+    transform: scale(1.03);
 }
 
 .link{
@@ -652,18 +654,66 @@ h1{
     main{
         margin: 0 auto;
     }
-    /* #navbar ul {
-        width: 40%;
+
+    .center {
+        top: -140px;
     }
 
-    .left-parenthesis,
-    .right-parenthesis {
-        color: white;
+    #avatar{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #avatar,
+    .welcome-buttons {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .welcome-buttons{
+        width: 70%;
+    }
+
+    .about-info,
+    .about-info-2,
+    #projects div {
+        background: none;
+    }
+
+
+    .list {
+        width: 60%;
+    }
+
+    #navbar ul {
+        position: relative;
+        flex-direction: row;
+        display: flex;
+        justify-content: space-between;
+        top: 0;
     }
 
     #navbar ul li {
-        max-width: 100px;
-    } */
+        padding: 0;
+    }
+
+    
+    #navbar ul li {
+        width: 200px;
+    }
+
+    #navbar ul {
+        width: 50%;
+    }
+
+    .hidden {
+        display: block;
+    }
+
+    button{
+        display: none;
+    }
 }
 
 @media(prefers-reduced-motion) {

@@ -232,6 +232,7 @@ h1{
 
 #welcome-section{
     height: 100dvh;
+    position: relative;
 }
 
 #avatar{
@@ -242,6 +243,8 @@ h1{
 .center{
     width: 50%;
     height: 50%;
+    position: relative;
+    top: -50px;
 }
 
 .profession{
@@ -512,6 +515,10 @@ h1{
 }
 
 @media screen and (min-width: 375px) and (max-width: 399px){
+    .center{
+        top: -100px;
+    }
+
     .slide-in-el {
             opacity: 0;
             transform: translateX(40%);

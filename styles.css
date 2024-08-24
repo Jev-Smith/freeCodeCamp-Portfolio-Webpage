@@ -357,11 +357,11 @@ h1{
     transform: scale(2);
 }
 
-.hide-li{
+.hide-el{
     opacity: 0;
 }
 
-.show-li{
+.show-el{
     transition: opacity 2s;
     opacity: 1;
 }

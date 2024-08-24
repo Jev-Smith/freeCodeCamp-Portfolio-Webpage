@@ -47,7 +47,7 @@
 
                 <li class="hidden nav-items">
                     <span class="left-parenthesis">(</span>
-                    <a href="#contacts" class="nav-link">Contacts</a>
+                    <a href="#contacts" class="nav-link scroll-zero">Contacts</a>
                     <span class="right-parenthesis">)</span>
                 </li>
             </ul>
@@ -91,9 +91,9 @@
                     <span class="material-symbols-outlined about-icons">work</span>
 
                     <ul>
-                        <li class="observe hide-li"><p>4 years</p></li>
-                        <li class="observe hide-li"><p>Self-taught</p></li>
-                        <li class="observe hide-li"><p>Full Stack Development</p></li>
+                        <li class="observe hide-el"><p>4 years</p></li>
+                        <li class="observe hide-el"><p>Self-taught</p></li>
+                        <li class="observe hide-el"><p>Full Stack Development</p></li>
                     </ul>
                 </div>
             </div>
@@ -101,13 +101,13 @@
                 <div>
                     <span class="material-symbols-outlined about-icons">computer</span>
                     <ul>
-                        <li class="observe hide-li">
+                        <li class="observe hide-el">
                             <p>Responsive Web Design</p>
                         </li>
-                        <li class="observe hide-li">
+                        <li class="observe hide-el">
                             <p>Back End Development and APIs</p>
                         </li>
-                        <li class="observe hide-li">
+                        <li class="observe hide-el">
                             <p>JavaScript Algorithms and Data Structures</p>
                         </li>
                     </ul>
@@ -167,15 +167,15 @@
             <h2 class="slide-in-el-2 observe">Projects</h2>
             <div>
                 <ul class="grid-container">
-                    <li class="project-tile observe hide-li">
+                    <li class="project-tile observe hide-el">
                         <p>Pet Store <span class="material-symbols-outlined link">link</span></p>
                         <a href="#" aria-label="Visit pet store project"></a>
                     </li>
-                    <li class="project-tile observe hide-li">
+                    <li class="project-tile observe hide-el">
                         <p>Tribute Page <span class="material-symbols-outlined link">link</span></p>
                         <a href="#" aria-label="Visit tribute page project"></a>
                     </li>
-                    <li class="project-tile third-grid-item observe hide-li">
+                    <li class="project-tile third-grid-item observe hide-el">
                         <p>Survey Page <span class="material-symbols-outlined link">link</span></p>
                         <a href="#" aria-label="Visit survey page project"></a>
                     </li>
@@ -226,6 +226,15 @@
                         icon.innerText = 'menu';
                     }
                 })
+
+                setTimeout(() => {
+                    if (aTag.classList.contains('scroll-zero')) {
+                        window.scrollBy(0, 0);
+                    }
+                    else {
+                        window.scrollBy(0, -50);
+                    }
+                }, 0)
             })
         })
 
@@ -248,14 +257,14 @@
                     entry.target.classList.add('slide-in');
                 }
                 else if(entry.isIntersecting && entry.target.nodeName === 'LI'){
-                    entry.target.classList.add('show-li');
+                    entry.target.classList.add('show-el');
                 }
                 else if(entry.isIntersecting && entry.target.classList.contains('slide-in-el-2')){
                     entry.target.classList.add('slide-in-2');
                 }
                 else {
                     entry.target.classList.remove('slide-in');
-                    entry.target.classList.remove('show-li');
+                    entry.target.classList.remove('show-el');
                     entry.target.classList.remove('slide-in-2');
                 }
             })

@@ -537,6 +537,15 @@ h1{
     #contacts ul li p {
         font-size: 1.08rem;
     }
+
+    #experience h2,
+    #about-me-text{
+        font-size: 2.8rem;
+    }
+
+    .list li {
+        font-size: 1rem;
+    }
 }
 
 @media screen and (min-width: 375px) and (max-width: 399px){
@@ -554,10 +563,21 @@ h1{
         opacity: 1;
         transform: translateX(67%);
     }
+
+    #experience h2,
+    #about-me-text{
+        font-size: 3rem;
+    }
+
+    .list li {
+        font-size: 1.125rem;
+    }
 }
 
 @media screen and (min-width: 400px) and (max-width: 499px) {
-    h2 {
+    h2,
+    #experience h2,
+    #about-me-text {
         font-size: 3.4rem;
     }
 
@@ -569,7 +589,11 @@ h1{
     .slide-in {
         transition: all 1.5s;
         opacity: 1;
-        transform: translateX(65%);
+        transform: translateX(68%);
+    }
+    
+    .list li {
+        font-size: 1.125rem;
     }
 }
 

@@ -552,7 +552,7 @@ h1{
     .slide-in {
         transition: all 1.5s;
         opacity: 1;
-        transform: translateX(70%);
+        transform: translateX(67%);
     }
 }
 
@@ -610,26 +610,13 @@ h1{
 @media screen and (min-width: 720px) {
     .slide-in-el {
         opacity: 0;
-        transform: translateX(80%);
+        transform: translateX(65%);
     }
 
     .slide-in {
         transition: all 1.5s;
         opacity: 1;
-        transform: translateX(90%);
-    }
-}
-
-@media screen and (min-width: 720px) {
-    .slide-in-el {
-        opacity: 0;
         transform: translateX(70%);
-    }
-
-    .slide-in {
-        transition: all 1.5s;
-        opacity: 1;
-        transform: translateX(80%);
     }
 
     #about-me-text {

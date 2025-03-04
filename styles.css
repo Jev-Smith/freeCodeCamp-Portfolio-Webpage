@@ -121,7 +121,9 @@ h2,
 .list,
 .grid-container li,
 .link,
-.email{
+.email,
+.center,
+#welcome-section{
     position: relative;
 }
 
@@ -257,7 +259,6 @@ h1{
 
 #welcome-section{
     height: 100dvh;
-    position: relative;
 }
 
 #avatar{
@@ -268,7 +269,6 @@ h1{
 .center{
     width: 50%;
     height: 50%;
-    position: relative;
     top: -50px;
 }
 
@@ -480,7 +480,7 @@ h1{
 
 /* Contacts Section */
 #contacts ul{
-    margin-top: var(--double-rem);
+    margin-top: var(--one-rem);
     margin-bottom: 0;
     margin-left: auto;
     margin-right: auto;
@@ -534,10 +534,6 @@ h1{
         width: 80%;
     }
 
-    #contacts ul li p {
-        font-size: 1.08rem;
-    }
-
     #experience h2,
     #about-me-text{
         font-size: 2.8rem;
@@ -545,6 +541,14 @@ h1{
 
     .list li {
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .slide-in {
+        transition: all 1.5s;
+        opacity: 1;
+        transform: translateX(52%);
     }
 }
 

@@ -44,7 +44,8 @@ a{
 .about-info,
 .list ul,
 #projects div,
-.grid-container li{
+.grid-container li,
+#img-div{
     display: flex;
 }
 
@@ -70,7 +71,8 @@ header{
 .welcome-buttons div a,
 #about-me-image,
 .about-info,
-.about-icons{
+.about-icons,
+.welcome-buttons{
     padding: var(--one-rem);
 }
 
@@ -78,8 +80,7 @@ h2{
     font-size: 3.8rem;
 }
 
-section,
-#avatar{
+section{
     margin-bottom: var(--double-rem);
 }
 
@@ -121,9 +122,7 @@ h2,
 .list,
 .grid-container li,
 .link,
-.email,
-.center,
-#welcome-section{
+.email{
     position: relative;
 }
 
@@ -141,7 +140,6 @@ h2,
 }
 
 #projects div,
-.welcome-buttons,
 .about-info{
     margin-top: var(--double-rem);
 }
@@ -178,7 +176,7 @@ h1{
 header{
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .hidden{
@@ -261,16 +259,51 @@ h1{
     height: 100dvh;
 }
 
-#avatar{
+#img-div{
     width: 100%;
+    height: 50%;
+}
+
+#avatar{
+    width:100%;
+    height: 100%;
     border-radius: 50%;
+}
+
+.welcome-text{
+    padding-top: var(--double-rem);
+    height: 50%;
 }
 
 .center{
     width: 50%;
-    height: 50%;
-    top: -50px;
+    height: auto;
 }
+
+
+/* test */
+/* #welcome-section{
+    height: 100dvh;
+    width: 100dwh;
+}
+
+.center {
+    width: 50%;
+    height: 100dvh;
+}
+
+#img-div {
+    width: 100%;
+    height: 50dvh;
+}
+
+#avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+} */
+
+/* end test */
 
 .profession{
     letter-spacing: 1.7px;
@@ -303,7 +336,7 @@ h1{
 }
 
 .drop-arrow{
-    margin-top: var(--one-rem);
+    /* margin-top: var(--one-rem); */
     animation-name: point-down;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -313,11 +346,11 @@ h1{
 
 @keyframes point-down {
     from{
-        top: 0px;
+        top: -15px;
     }
 
     to{
-        top: 10px;
+        top: -4px;
     }
 }
 
@@ -553,9 +586,6 @@ h1{
 }
 
 @media screen and (min-width: 375px) and (max-width: 399px){
-    .center{
-        top: -100px;
-    }
 
     .slide-in-el {
             opacity: 0;
@@ -629,10 +659,6 @@ h1{
     #about-me-text {
         font-size: 4.8rem;
     }
-
-    .center {
-        top: -100px;
-    }
 }
 
 @media screen and (min-width: 720px) {
@@ -654,9 +680,6 @@ h1{
 
 
 @media screen and (min-width: 810px) {
-    .center{
-        top: -140px;
-    }
 
     .slide-in-el {
         opacity: 0;
@@ -682,10 +705,6 @@ h1{
         opacity: 1;
         transform: translateX(95%);
     }
-
-    .center {
-        top: -160px;
-    }
 }
 
 @media screen and (min-width: 900px){
@@ -693,15 +712,9 @@ h1{
         margin: 0 auto;
     }
 
-    .center {
-        top: -140px;
-    }
-
-    #avatar{
+    /* #avatar{
         width: 90%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+    } */
 
     #avatar,
     .welcome-buttons {
